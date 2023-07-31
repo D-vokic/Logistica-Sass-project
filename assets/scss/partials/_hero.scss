@@ -1,0 +1,136 @@
+@use "../components/" as *;
+
+.hero {
+  background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url("../../assets/img/carousel-1.jpg");
+  background-position: top;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: scroll;
+
+  &__wrapper {
+    height: 80vh;
+    @include grid(2, 70% 30%);
+    align-items: center;
+    color: $lightColor;
+
+    @include breakpoints(768px) {
+      grid-template-columns: 1fr;
+      gap: 1rem;
+    }
+
+    @include breakpoints(576px) {
+      height: 60vh;
+      gap: 0;
+      justify-content: center;
+    }
+
+    .hero__item:first-child {
+      animation: hero-animation 2s;
+    }
+
+    .hero__item {
+      .hero__subheading {
+        font-size: 1.5rem;
+        margin-bottom: 1rem;
+
+        @include breakpoints(768px) {
+          font-size: 1rem;
+        }
+      }
+
+      .hero__heading {
+        font-size: 3rem;
+        max-width: 600px;
+
+        @include breakpoints(992px) {
+          font-size: 2rem;
+        }
+
+        @include breakpoints(768px) {
+          font-size: 1.5rem;
+        }
+
+        span {
+          color: $primaryColor;
+        }
+      }
+
+      .hero__text {
+        margin: 2rem 0;
+        font-size: 1.2rem;
+        font-weight: 600;
+
+        @include breakpoints(992px) {
+          font-size: 1rem;
+        }
+
+        @include breakpoints(768px) {
+          font-size: 0.9rem;
+        }
+
+        @include breakpoints(576px) {
+          font-size: 0.8rem;
+        }
+      }
+
+      .hero__btnGroup {
+        margin-top: 1rem;
+
+        .hero__btn-1 {
+          @include btn();
+          padding: 1rem 2.5rem;
+          margin-right: 1rem;
+        }
+
+        .hero__btn-2 {
+          @include btn($secondaryColor, $lightColor, 1rem, 2.5rem, $lightColor, $secondaryColor);
+
+          @include breakpoints(576px) {}
+        }
+
+        .hero__btn-1,
+        .hero__btn-2 {
+          @include breakpoints(576px) {
+            padding: 0.9rem 1rem;
+          }
+        }
+      }
+
+      .hero__chevrons {
+        @include flex(start, end, column);
+        animation: hero-animation 2s;
+
+        @include breakpoints(768px) {
+          @include flex(start, start, row nowrap, 2rem);
+        }
+
+        #left {
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          border-radius: 50rem;
+          text-align: center;
+          border: 1px solid white;
+          font-size: 1.3rem;
+          margin-bottom: 1rem;
+        }
+
+        #right {
+          width: 50px;
+          height: 50px;
+          line-height: 50px;
+          border-radius: 50rem;
+          text-align: center;
+          border: 1px solid white;
+          font-size: 1.3rem;
+        }
+
+        #left:hover,
+        #right:hover {
+          background-color: $primaryColor;
+        }
+      }
+    }
+  }
+}

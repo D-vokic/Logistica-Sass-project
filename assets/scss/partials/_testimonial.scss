@@ -1,0 +1,78 @@
+@use "../components/" as *;
+
+.testimonial {
+  &__wrapper {
+    margin-top: 2rem;
+    @include flex(space-between, center, wrap, 1rem);
+
+    @include breakpoints(992px) {
+      @include flex(center);
+    }
+
+    @include breakpoints(768px) {
+      .testimonial__item:nth-child(2),
+      .testimonial__item:nth-child(3) {
+        display: none;
+      }
+    }
+
+    .testimonial__item:nth-child(2) {
+      box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+    }
+
+    .testimonial__item {
+      flex-basis: 32%;
+      padding: 3rem;
+      position: relative;
+      overflow: visible;
+
+      @include breakpoints(1000px) {
+        flex-basis: 80%;
+      }
+
+      @include breakpoints(768px) {
+        padding: 1rem;
+      }
+
+      .testimonial__box {
+        @include flex(flex-start, end, wrap, 1.5rem);
+        margin-bottom: 1.5rem;
+
+        .testimonial__img {
+          width: 80px;
+
+          @include breakpoints(768px) {
+            width: 100px;
+          }
+        }
+
+        .testimonial__info > .testimonial__name {
+          font-size: 1.3rem;
+        }
+      }
+
+      .testimonial__icon {
+        position: absolute;
+        top: -1.3rem;
+        right: 0rem;
+        margin-right: 1.5rem;
+        color: #555;
+        opacity: 0.1;
+        z-index: 999;
+      }
+    }
+
+    .testimonial__dots {
+      width: 100%;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      animation: preloader 0.6s ease-in-out alternate 0.4s infinite;
+
+      .bi-three-dots {
+        color: $primaryColor;
+        // animation: preloader 0.6s ease-in-out alternate 0.4s infinite;
+      }
+    }
+  }
+}

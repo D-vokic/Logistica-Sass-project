@@ -1,0 +1,76 @@
+@use "../components/" as *;
+
+.about {
+  margin-top: 2rem;
+  @include flex(flex-start, stretch, wrap, 1.5rem);
+
+  @include breakpoints(576px) {
+    margin: 0;
+  }
+
+
+  &__item {
+    flex: 1 0 400px;
+
+    @include breakpoints(576px) {
+      flex: 1 0 250px;
+    }
+
+    &:first-child {
+      max-height: 500px;
+
+      .about__img {
+        height: 100%;
+      }
+    }
+
+    &:last-child {
+      margin-right: 10%;
+
+      @include breakpoints(916px) {
+        margin-left: 10%;
+      }
+
+      .section-title-before,
+      .section-title {
+        text-align: left;
+      }
+
+      .section-title {
+        max-width: 550px;
+      }
+
+      .about__text {
+        margin: 2rem 0;
+      }
+
+      .about__info {
+        margin-bottom: 1.3rem;
+        @include flex(flex-start, flex-start, nowrap, 1.5rem);
+
+        @include breakpoints(768px) {
+          flex-direction: column;
+        }
+
+        .about__icon {
+          color: $primaryColor;
+          font-size: 3rem;
+
+          @include breakpoints(576px) {
+            font-size: 2rem;
+          }
+        }
+
+        &__heading {
+          margin: 1rem 0;
+          font-size: 1.3rem;
+        }
+      }
+
+      .about__btn {
+        @include btn();
+        padding: 1rem 3rem;
+      }
+    }
+  }
+}

@@ -1,0 +1,163 @@
+@use "../components/" as *;
+
+.footer {
+  background-color: $darkColor;
+  background-image: linear-gradient(rgba(6, 3, 21, 0.3), rgba(6, 3, 21, 0.3)), url("../../assets/img/map.png");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  padding-bottom: 0;
+
+  &__wrapper {
+    @include flex(space-between, center, wrap);
+
+    @include breakpoints(992px) {
+      gap: 2rem;
+    }
+
+    @include breakpoints(576px) {
+      @include flex(center);
+    }
+
+    .footer__item {
+      flex-basis: 23%;
+      margin-bottom: 3rem;
+
+      @include breakpoints(992px) {
+        flex-basis: 45%;
+      }
+
+      @include breakpoints(768px) {
+        flex-basis: 100%;
+      }
+
+      .footer__heading {
+        color: $lightColor;
+        font-size: 1.5rem;
+      }
+
+      .footer__list {
+        margin-top: 15px;
+
+        &__item {
+          & :hover {
+            cursor: pointer;
+            letter-spacing: 2px;
+            transition: 1s;
+          }
+
+          &:not(:last-child) {
+            margin-bottom: 5px;
+          }
+
+          a {
+            color: $lightColor;
+
+            i {
+              margin-right: 10px;
+              color: $lightColor;
+            }
+          }
+        }
+      }
+
+      .footer__social {
+        margin-top: 20px;
+
+        a {
+          @include btn(transparent, $lightColor, none, 0rem, $lightColor, none);
+          border-radius: 50%;
+          border: 1px solid $lightColor;
+
+          &:not(:last-child) {
+            margin-right: 5px;
+          }
+
+          &:hover {
+            color: $primaryColor;
+            background-color: $lightColor;
+            transition: 0.2s ease;
+          }
+
+          i {
+            width: 35px;
+            height: 35px;
+            line-height: 35px;
+            text-align: center;
+            border-radius: 50%;
+          }
+        }
+      }
+
+      .extra {
+        margin-top: 15px;
+        color: $lightColor;
+      }
+
+      .footer__form {
+        margin: 15px 0;
+        position: relative;
+
+        @include breakpoints(576px) {
+          display: block;
+        }
+
+        .footer__input {
+          background: $lightColor;
+          padding: 1.2rem 1.5rem;
+          color: $darkColor;
+          width: 100%;
+
+          &::placeholder {
+            font-size: 1rem;
+            color: $bodyColor;
+          }
+        }
+
+        .footer__submit {
+          background-color: $primaryColor;
+          color: $lightColor;
+          padding: 0.5rem 1rem;
+          position: absolute;
+          right: 7px;
+          top: 7px;
+          bottom: 7px;
+          font-size: 1.1rem;
+          cursor: pointer;
+
+          &:hover {
+            background-color: $primaryColor;
+            opacity: 0.8;
+          }
+
+          @include breakpoints(576px) {
+            font-size: 1rem;
+          }
+        }
+      }
+    }
+  }
+
+  .copyright {
+    padding: 1.5rem 0;
+    border-top: 1px solid rgba(256, 256, 256, 0.1);
+    @include flex(space-between, center, row wrap);
+
+    @include breakpoints(400px) {
+      display: block;
+      text-align: center;
+    }
+
+    .copyright__text {
+      color: $lightColor;
+    }
+
+    .copyright__link {
+      padding: 0;
+      text-transform: capitalize;
+      font-weight: 500;
+      color: $primaryColor;
+      border-bottom: 1px solid $lightColor;
+    }
+  }
+}

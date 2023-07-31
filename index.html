@@ -1,0 +1,724 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8" />
+  <meta content="width=device-width, initial-scale=1.0" name="viewport" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <title>Logistica - Shipping Company Website Template</title>
+
+  <!-- Meta tags -->
+  <meta name="author" content="Dusko Vokic" />
+  <meta name="keywords" content="Sass, Flexbox, Grid, Position layout Template, HTML template, CSS, CSS template" />
+  <meta name="description" content="Shipping Company template for beginers" />
+  <meta name="generator" content="Visual Studio Code" />
+  <meta name="title" content="Logistica project in Sass" />
+
+  <!-- Favicon -->
+  <link href="assets/img/favicon.png" rel="icon" />
+
+  <!-- Google Web Inter / Roboto Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link
+    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800;900&family=Roboto:wght@500;700;800;900&display=swap"
+    rel="stylesheet" />
+
+  <!-- Font awesome CDN CSS link -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"
+    integrity="sha512-iecdLmaskl7CVkqkXNQ/ZH/XLlvWZOJyj7Yy7tcenmpD1ypASozpmT/E0iPtmFIB46ZmdtAc9eNBvH0H/ZpiBw=="
+    crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+  <!-- Bootstrap CDN CSS link -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.5/font/bootstrap-icons.css" />
+
+  <!-- AOS CSS -->
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet" />
+
+  <!-- Custom CSS -->
+  <link rel="stylesheet" href="assets/css/style.css" />
+</head>
+
+<body>
+
+
+  <!-- Navbar section starts -->
+  <nav class="nav">
+    <a href="index.html" class="nav__logo">
+      <h1 class="nav__logo__heading">Logistica</h1>
+    </a>
+    <ul class="nav__list">
+      <li class="nav__item">
+        <a href="index.html" class="nav__link active">Home</a>
+      </li>
+      <li class="nav__item">
+        <a href="#about" class="nav__link">About</a>
+      </li>
+      <li class="nav__item">
+        <a href="#services" class="nav__link">Services</a>
+      </li>
+      <li class="nav__item dropdown">
+        <a href="#" class="nav__link">Pages</a>
+        <i class="fa-solid fa-angle-down"></i>
+        <div class="nav__dropdown">
+          <a href="#pricing" class="nav__dropdown__link">Pricing Plan</a>
+          <a href="#features" class="nav__dropdown__link">Features</a>
+          <a href="#quote" class="nav__dropdown__link">Free Quote</a>
+          <a href="#team" class="nav__dropdown__link">Our Team</a>
+          <a href="#testimonial" class="nav__dropdown__link">Testimonial</a>
+          <a href="##" class="nav__dropdown__link">404 Page</a>
+        </div>
+      </li>
+      <li class="nav__item">
+        <a href="#contact" class="nav__link">Contact</a>
+      </li>
+      <li class="nav__contact">
+        <i class="fa fa-headphones fa-lg"></i>
+        +012 345 6789
+      </li>
+    </ul>
+    <div class="nav__hamburger">
+      <i class="fa fa-bars"></i>
+    </div>
+  </nav>
+  <!-- Navbar section ends -->
+
+
+
+
+
+  <!-- Hero section starts -->
+  <section class="hero">
+    <div class="hero__wrapper container">
+      <article class="hero__item">
+        <h5 class="hero__subheading">Transport & Logistics Solution</h5>
+        <h2 class="hero__heading">
+          #1 Place For Your <span>Logistics</span> Solution
+        </h2>
+        <p class="hero__text">
+          Vero elitr justo clita lorem. Ipsum dolor at sed stet sit diam no.
+          Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.
+        </p>
+        <div class="hero__btnGroup">
+          <a href="#" class="hero__btn-1" data-aos="fade-right" data-aos-duration="2000">Read
+            More</a>
+          <a href="#" class="hero__btn-2" data-aos="fade-left" data-aos-duration="2000">Free
+            Quote</a>
+        </div>
+      </article>
+      <article class="hero__item">
+        <div class="hero__chevrons" id="hero">
+          <i class="bi bi-chevron-left" id="left"></i>
+          <i class="bi bi-chevron-right" id="right"></i>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- Hero section ends -->
+
+
+
+
+
+  <!-- About section starts -->
+  <section class="about" id="about">
+    <article class="about__item" data-aos="fade-right" data-aos-delay="300">
+      <img src="assets/img/about.jpg" class="about__img" alt="about image" />
+    </article>
+    <article class="about__item" data-aos="fade-up" data-aos-delay="600">
+      <h3 class="section-title-before">ABOUT US</h3>
+      <h4 class="section-title">Quick Transport and Logistics Solutions</h4>
+      <p class="about__text">
+        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+        diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+        lorem sit clita duo justo magna dolore erat amet
+      </p>
+      <div class="about__info">
+        <div class="about__info__item">
+          <i class="fa fa-globe about__icon"></i>
+          <h6 class="about__info__heading">Global Coverage</h6>
+          <p class="about__info__text">
+            Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem
+            diam justo.
+          </p>
+        </div>
+        <div class="about__info__item">
+          <i class="fa fa-shipping-fast about__icon"></i>
+          <h6 class="about__info__heading">On Time Delivery</h6>
+          <p class="about__info__text">
+            Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem
+            diam justo.
+          </p>
+        </div>
+      </div>
+      <a href="#" class="about__btn">Explore More</a>
+    </article>
+  </section>
+  <!-- About section ends -->
+
+
+
+
+
+
+  <!-- Facts section starts -->
+  <section class="facts container" id="facts">
+    <article class="facts__item" data-aos="fade-up">
+      <h5 class="section-title-before">SOME FACTS</h5>
+      <h4 class="section-title">#1 Place To Manage All Of Your Shipments</h4>
+      <p class="facts__text">
+        Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
+        diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
+        lorem sit clita duo justo magna dolore erat amet
+      </p>
+      <div class="facts__query">
+        <i class="fa fa-headphones fa-2x"></i>
+        <div class="facts__info">
+          <p class="facts__info-1">Call for any query!</p>
+          <p class="facts__info-2">+012 345 6789</p>
+        </div>
+      </div>
+    </article>
+    <article class="facts__item">
+      <div class="facts__boxes">
+        <div class="facts__red-blue">
+          <div class="facts__red" id="red">
+            <i class="fa fa-users fa-2x"></i>
+            <h2 class="facts__numbers">1234</h2>
+            <p class="facts__state">Happy Clients</p>
+          </div>
+          <div class="facts__blue" id="blue">
+            <i class="fa fa-star fa-2x"></i>
+            <h2 class="facts__numbers">1234</h2>
+            <p class="facts__state">Complete Shipments</p>
+          </div>
+        </div>
+        <div class="facts__green" id="green">
+          <i class="fa fa-ship fa-2x"></i>
+          <h2 class="facts__numbers">1234</h2>
+          <p class="facts__state">Customer Reviews</p>
+        </div>
+      </div>
+    </article>
+  </section>
+  <!-- Facts section ends -->
+
+
+
+
+
+  <!-- Services section starts -->
+  <section class="services" id="services">
+    <h5 class="section-title-before">OUR SERVICES</h5>
+    <h4 class="section-title">Explore Our Services</h4>
+    <div class="services__wrapper container">
+      <div class="services__item" data-aos="fade-up">
+        <div class="services__item__img">
+          <img src="assets/img/service-6.jpg" alt="services image" class="services__item__image">
+        </div>
+        <h4 class="services__item__heading">Air Freight</h4>
+        <p class="services__item__text">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+        </p>
+        <div class="services__icon">
+          <i class="fa fa-angle-right"></i>
+          <span class="services__btn">Read More</span>
+        </div>
+        <a href="#" class="services__btn-2">Read More</a>
+      </div>
+      <div class="services__item" data-aos="fade-up" data-aos-duration="1500">
+        <div class="services__item__img">
+          <img src="assets/img/service-1.jpg" alt="services image" class="services__item__image">
+        </div>
+        <h4 class="services__item__heading">Customs Clearance</h4>
+        <p class="services__item__text">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+        </p>
+        <div class="services__icon">
+          <i class="fa fa-angle-right"></i>
+          <span class="services__btn">Read More</span>
+        </div>
+        <a href="#" class="services__btn-2">Read More</a>
+      </div>
+      <div class="services__item" data-aos="fade-up" data-aos-duration="1500">
+        <div class="services__item__img">
+          <img src="assets/img/service-2.jpg" alt="services image" class="services__item__image">
+        </div>
+        <h4 class="services__item__heading">Warehouse Solutions</h4>
+        <p class="services__item__text">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+        </p>
+        <div class="services__icon">
+          <i class="fa fa-angle-right"></i>
+          <span class="services__btn">Read More</span>
+        </div>
+        <a href="#" class="services__btn-2">Read More</a>
+      </div>
+      <div class="services__item" data-aos="fade-up" data-aos-duration="1500">
+        <div class="services__item__img">
+          <img src="assets/img/service-3.jpg" alt="services image" class="services__item__image">
+        </div>
+        <h4 class="services__item__heading">Ocean Freight</h4>
+        <p class="services__item__text">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+        </p>
+        <div class="services__icon">
+          <i class="fa fa-angle-right"></i>
+          <span class="services__btn">Read More</span>
+        </div>
+        <a href="#" class="services__btn-2">Read More</a>
+      </div>
+      <div class="services__item" data-aos="fade-up" data-aos-duration="1500">
+        <div class="services__item__img">
+          <img src="assets/img/service-4.jpg" alt="services image" class="services__item__image">
+        </div>
+        <h4 class="services__item__heading">Road Freight</h4>
+        <p class="services__item__text">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+        </p>
+        <div class="services__icon">
+          <i class="fa fa-angle-right"></i>
+          <span class="services__btn">Read More</span>
+        </div>
+        <a href="#" class="services__btn-2">Read More</a>
+      </div>
+      <div class="services__item" data-aos="fade-up" data-aos-duration="1500">
+        <div class="services__item__img">
+          <img src="assets/img/service-5.jpg" alt="services image" class="services__item__image">
+        </div>
+        <h4 class="services__item__heading">Train Freight</h4>
+        <p class="services__item__text">Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam lorem diam.
+        </p>
+        <div class="services__icon">
+          <i class="fa fa-angle-right"></i>
+          <span class="services__btn">Read More</span>
+        </div>
+        <a href="#" class="services__btn-2">Read More</a>
+      </div>
+    </div>
+  </section>
+  <!-- Services section ends -->
+
+
+
+
+
+  <!-- Features section starts -->
+  <section class="features" id="features">
+    <article class="features__item" data-aos="fade-up" data-aos-duration="1000">
+      <h5 class="section-title-before">OUR FEATURES</h5>
+      <h4 class="section-title">We Are Trusted Logistics Company Since 1990</h4>
+      <div class="features__promo">
+        <i class="fa fa-globe"></i>
+        <div class="features__info">
+          <p class="features__info-1">Worldwide Service</p>
+          <p class="features__info-2">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo justo
+            magna erat amet</p>
+        </div>
+      </div>
+      <div class="features__promo">
+        <i class="fa fa-shipping-fast"></i>
+        <div class="features__info">
+          <p class="features__info-1">On Time Delivery</p>
+          <p class="features__info-2">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo justo
+            magna erat amet</p>
+        </div>
+      </div>
+      <div class="features__promo">
+        <i class="fa fa-headphones"></i>
+        <div class="features__info">
+          <p class="features__info-1">24/7 Telephone Support</p>
+          <p class="features__info-2">Diam dolor ipsum sit amet eos erat ipsum lorem sed stet lorem sit clita duo justo
+            magna erat amet</p>
+        </div>
+      </div>
+    </article>
+    <article class="features__item" data-aos="fade-down" data-aos-duration="1000">
+      <img src="assets/img/feature.jpg" class="features__img" alt="features image" />
+    </article>
+  </section>
+  <!-- Features section ends -->
+
+
+
+
+
+
+  <!-- Pricing section starts -->
+  <section class="pricing" id="pricing">
+    <h5 class="section-title-before" data-aos="fade-up" data-aos-duration="1000">PRICING PLAN</h5>
+    <h4 class="section-title" data-aos="fade-up" data-aos-duration="1000">Perfect Pricing Plan</h4>
+    <div class="pricing__wrapper container">
+      <article class="pricing__item" data-aos="fade-up" data-aos-duration="1500">
+        <div class="pricing__header">
+          <h3 class="pricing__heading">Basic Plan</h3>
+        </div>
+        <h6 class="pricing__price">
+          <small class="dollar__top">$</small><span>#49:00</span>/ month
+        </h6>
+        <ul class="pricing__list">
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">HTML5 & CSS3</p>
+          </li>
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">Bootstrap v5</p>
+          </li>
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">Awesome Icons</p>
+          </li>
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">Responsive Layout</p>
+          </li>
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">Browser Support</p>
+          </li>
+          <div class="pricing__icon">
+            <i class="fa fa-angle-right"></i>
+            <span class="pricing__btn">Order Now</span>
+          </div>
+        </ul>
+      </article>
+      <article class="pricing__item" data-aos="fade-up" data-aos-duration="1500">
+        <div class="pricing__header">
+          <h3 class="pricing__heading">Standard Plan</h3>
+        </div>
+        <h6 class="pricing__price">
+          <small class="dollar__top">$</small><span>#99:00</span>/ month
+        </h6>
+        <ul class="pricing__list">
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">HTML5 & CSS3</p>
+          </li>
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">Bootstrap v5</p>
+          </li>
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">Awesome Icons</p>
+          </li>
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">Responsive Layout</p>
+          </li>
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">Browser Support</p>
+          </li>
+          <div class="pricing__icon">
+            <i class="fa fa-angle-right"></i>
+            <span class="pricing__btn">Order Now</span>
+          </div>
+        </ul>
+      </article>
+      <article class="pricing__item" data-aos="fade-up" data-aos-duration="1500">
+        <div class="pricing__header">
+          <h3 class="pricing__heading">Advanced Plan</h3>
+        </div>
+        <h6 class="pricing__price">
+          <small class="dollar__top">$</small><span>149:00</span>/ month
+        </h6>
+        <ul class="pricing__list">
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">HTML5 & CSS3</p>
+          </li>
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">Bootstrap v5</p>
+          </li>
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">Awesome Icons</p>
+          </li>
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">Responsive Layout</p>
+          </li>
+          <li class="pricing__list__item">
+            <i class="fa-solid fa-check"></i>
+            <p class="pricing__text">Browser Support</p>
+          </li>
+          <div class="pricing__icon">
+            <i class="fa fa-angle-right"></i>
+            <span class="pricing__btn">Order Now</span>
+          </div>
+        </ul>
+      </article>
+    </div>
+  </section>
+  <!-- Pricing section ends -->
+
+
+
+
+
+
+  <!-- Quote section starts -->
+  <section class="quote container" id="quote">
+    <article class="quote__item" data-aos="fade-up" data-aos-duration="1000">
+      <h2 class="section-title-before">GET A QUOTE</h2>
+      <h3 class="section-title">Request A Free Qoute!</h3>
+      <p class="quote__text">Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu diam amet diam et eos.
+        Clita erat ipsum et lorem et sit, sed stet lorem sit clita duo justo erat amet
+      </p>
+      <div class="quote__query">
+        <i class="fa fa-headphones fa-2x"></i>
+        <div class="quote__info">
+          <p class="quote__info-1">Call for any query!</p>
+          <p class="quote__info-2">+012 345 6789</p>
+        </div>
+      </div>
+    </article>
+    <article class="quote__item">
+      <div class="quote__form__wrapper container">
+        <form action="#" method="GET">
+          <input type="text" id="btn" placeholder="your name" class="form__element" />
+          <input type="email" id="btn-1" placeholder="your Email" class="form__element" />
+          <input type="text" id="btn-2" placeholder="your Mobile" class="form__element" />
+          <select class="form__select" id="btn-3">
+            <option selected="">Select A Freight</option>
+            <option value="1">Select A Freight</option>
+            <option value="2">Freight 1</option>
+            <option value="3">Freight 2</option>
+            <option value="4">Freight 3</option>
+          </select>
+          <textarea id="btn-4" name="message" id="" cols="20" rows="3" placeholder="Special Note"
+            class="form__textArea"></textarea>
+          <button>submit</button>
+        </form>
+      </div>
+    </article>
+  </section>
+  <!-- Quote section ends -->
+
+
+
+
+
+
+  <!-- Team section starst -->
+  <section class="team" id="team">
+    <h2 class="section-title-before" data-aos="fade-up" data-aos-duration="1000">OUR TEAM</h2>
+    <h3 class="section-title" data-aos="fade-up" data-aos-duration="1000">Expert Team Members</h3>
+    <div class="team__wrapper container">
+      <article class="team__item" data-aos="fade-up" data-aos-duration="1500">
+        <div class="team__item__img">
+          <img src="assets/img/team-1.jpg" class="team__img" alt="team img">
+        </div>
+        <h4 class="team__name">Full Name</h4>
+        <p class="team__position">Designation</p>
+        <div class="team__icon">
+          <i class="fa fa-share"></i>
+          <span class="team__btn">
+            <a href="" class="fab fa-facebook-f"></a>
+            <a href="" class="fab fa-twitter"></a>
+            <a href="" class="fab fa-instagram"></a>
+          </span>
+        </div>
+      </article>
+      <article class="team__item" data-aos="fade-up" data-aos-duration="1500">
+        <div class="team__item__img">
+          <img src="assets/img/team-2.jpg" class="team__img" alt="team img">
+        </div>
+        <h4 class="team__name">Full Name</h4>
+        <p class="team__position">Designation</p>
+        <div class="team__icon">
+          <i class="fa fa-share"></i>
+          <span class="team__btn">
+            <a href="" class="fab fa-facebook-f"></a>
+            <a href="" class="fab fa-twitter"></a>
+            <a href="" class="fab fa-instagram"></a>
+          </span>
+        </div>
+      </article>
+      <article class="team__item" data-aos="fade-up" data-aos-duration="1500">
+        <div class="team__item__img">
+          <img src="assets/img/team-3.jpg" class="team__img" alt="team img">
+        </div>
+        <h4 class="team__name">Full Name</h4>
+        <p class="team__position">Designation</p>
+        <div class="team__icon">
+          <i class="fa fa-share"></i>
+          <span class="team__btn">
+            <a href="" class="fab fa-facebook-f"></a>
+            <a href="" class="fab fa-twitter"></a>
+            <a href="" class="fab fa-instagram"></a>
+          </span>
+        </div>
+      </article>
+      <article class="team__item" data-aos="fade-up" data-aos-duration="1500">
+        <div class="team__item__img">
+          <img src="assets/img/team-4.jpg" class="team__img" alt="team img">
+        </div>
+        <h4 class="team__name">Full Name</h4>
+        <p class="team__position">Designation</p>
+        <div class="team__icon">
+          <i class="fa fa-share"></i>
+          <span class="team__btn">
+            <a href="" class="fab fa-facebook-f"></a>
+            <a href="" class="fab fa-twitter"></a>
+            <a href="" class="fab fa-instagram"></a>
+          </span>
+        </div>
+      </article>
+    </div>
+  </section>
+  <!-- Team section ends -->
+
+
+
+
+
+
+  <!-- Testimonial section starts -->
+  <section testimonial id="testimonial">
+    <h2 class="section-title-before" data-aos="fade-up" data-aos-duration="500">TESTIMONIAL</h2>
+    <h3 class="section-title" data-aos="fade-up" data-aos-duration="500">Our Clients Say!</h3>
+    <div class="testimonial__wrapper container">
+      <article class=" testimonial__item" data-aos="fade-up" data-aos-duration="700">
+        <div class="testimonial__box">
+          <img src="assets/img/testimonial-1.jpg" class="testimonial__img" alt="testimonial img">
+          <div class="testimonial__info">
+            <h4 class="testimonial__name">Client Name</h4>
+            <p class="testimonial__position">Profession</p>
+          </div>
+        </div>
+        <p class="testimonial__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum itaque,
+          eveniet quisquam eligendi, fugit voluptate. Maxime?
+        </p>
+        <i class="fa fa-quote-right fa-3x testimonial__icon"></i>
+      </article>
+      <article class="testimonial__item" data-aos="fade-up" data-aos-duration="700">
+        <div class="testimonial__box">
+          <img src="assets/img/testimonial-2.jpg" class="testimonial__img" alt="testimonial img">
+          <div class="testimonial__info">
+            <h4 class="testimonial__name">Client Name</h4>
+            <p class="testimonial__position">Profession</p>
+          </div>
+        </div>
+        <p class="testimonial__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum itaque,
+          eveniet quisquam eligendi, fugit voluptate. Maxime?
+        </p>
+        <i class="fa fa-quote-right fa-3x testimonial__icon"></i>
+      </article>
+      <article class="testimonial__item" data-aos="fade-up" data-aos-duration="700">
+        <div class="testimonial__box">
+          <img src="assets/img/testimonial-3.jpg" class="testimonial__img" alt="testimonial img">
+          <div class="testimonial__info">
+            <h4 class="testimonial__name">Client Name</h4>
+            <p class="testimonial__position">Profession</p>
+          </div>
+        </div>
+        <p class="testimonial__text">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Laborum itaque,
+          eveniet quisquam eligendi, fugit voluptate. Maxime?
+        </p>
+        <i class="fa fa-quote-right fa-3x testimonial__icon"></i>
+      </article>
+      <div class="testimonial__dots">
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor" class="bi bi-four-dots"
+            viewBox="0 0 16 16">
+            <path
+              d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm5 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+          </svg></span>
+        <span><svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" fill="currentColor"
+            class="bi bi-three-dots" viewBox="0 0 16 16">
+            <path
+              d="M3 9.5a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3zm 0a1.5 1.5 0 1 1 0-3 1.5 1.5 0 0 1 0 3z" />
+          </svg></span>
+      </div>
+    </div>
+  </section>
+  <!-- Testimonial section ends -->
+
+
+
+
+
+
+  <!-- Footer section starts -->
+  <section class="footer section" id="footer">
+    <div class="footer__wrapper container">
+      <article class="footer__item">
+        <h3 class="footer__heading">Address</h3>
+        <ul class="footer__list">
+          <li class="footer__list__item"><a href="#"><i class="fas fa-map-marker-alt"></i>Beograd, Srbija</a>
+          </li>
+          <li class="footer__list__item"><a href="#"><i class="fas fa-phone-alt"></i>+098 765 4321</a></li>
+          <li class="footer__list__item"><a href="#"><i class="fas fa-envelope"></i>info@example.com</a></li>
+        </ul>
+        <div class="footer__social">
+          <a href="#"><i class="fab fa-twitter"></i></a>
+          <a href="#"><i class="fab fa-facebook-f"></i></a>
+          <a href="#"><i class="fab fa-instagram"></i></a>
+          <a href="#"><i class="fab fa-linkedin-in"></i></a>
+        </div>
+      </article>
+      <article class="footer__item">
+        <h3 class="footer__heading">Services</h3>
+        <ul class="footer__list">
+          <li class="footer__list__item"><a href="#"><i class="fa fa-angle-right"></i>Air Freight</a></li>
+          <li class="footer__list__item"><a href="#"><i class="fa fa-angle-right"></i>Sea Freight</a>
+          </li>
+          <li class="footer__list__item"><a href="#"><i class="fa fa-angle-right"></i>Road Freight</a>
+          </li>
+          <li class="footer__list__item"><a href="#"><i class="fa fa-angle-right"></i>Logistic Solution</a>
+          </li>
+          <li class="footer__list__item"><a href="#"><i class="fa fa-angle-right"></i>Industry Solution</a></li>
+        </ul>
+      </article>
+      <article class="footer__item">
+        <h3 class="footer__heading">Quick Links</h3>
+        <ul class="footer__list">
+          <li class="footer__list__item"><a href="#about"><i class="fa fa-angle-right"></i>About Us</a></li>
+          <li class="footer__list__item"><a href="#contact"><i class="fa fa-angle-right"></i>Contact Us</a>
+          </li>
+          <li class="footer__list__item"><a href="#services"><i class="fa fa-angle-right"></i>Our Services</a>
+          </li>
+          <li class="footer__list__item"><a href="#"><i class="fa fa-angle-right"></i>Terms & Condition</a>
+          </li>
+          <li class="footer__list__item"><a href="#"><i class="fa fa-angle-right"></i>Support</a></li>
+        </ul>
+      </article>
+      <article class="footer__item">
+        <h3 class="footer__heading">Newsletter</h3>
+        <p class="footer__span extra">Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
+        <form class="footer__form">
+          <input type="email" placeholder="Your Email" class="footer__input">
+          <input type="submit" value="SignUp" class="footer__submit">
+        </form>
+      </article>
+    </div>
+    <div class="copyright container">
+      <p class="copyright__text">© <a class="copyright__link" href="#">Your Site Name</a>,
+        All Right
+        Reserved.</p>
+      <p class="copyright__text">Designed <a class="copyright__link" href="">ByMe</a>
+      </p>
+    </div>
+  </section>
+  <!-- Footer section ends -->
+
+
+
+
+
+  <!-- Back to top button starts -->
+  <button onclick="topFunction()" id="scrollBtn" title="You wanna go to top? Click than."
+    class="bi bi-arrow-up"></button>
+  <!-- Back to top button ends -->
+
+  <!-- Custom JS -->
+  <script src="assets/js/main.js"></script>
+
+  <!-- AOS JS -->
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+
+  <script>
+    AOS.init({ duration: 1200 });
+  </script>
+
+</body>
+
+</html>

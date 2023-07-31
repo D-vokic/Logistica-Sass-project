@@ -1,0 +1,100 @@
+@use "../components/" as *;
+
+.services {
+  &__wrapper {
+    @include grid(3, 1fr, 2rem);
+    margin-top: 3rem;
+    box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+
+    @include breakpoints(992px) {
+      @include grid(2, 1fr, 2rem);
+    }
+
+    @include breakpoints(768px) {
+      @include grid(1, 1fr, 2rem);
+    }
+
+    .services__item {
+      padding: 1.5rem;
+      box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+
+      &:hover .services__icon span.services__btn {
+        width: 10rem;
+      }
+
+      &:hover .services__icon > i {
+        border-radius: 0;
+      }
+
+      &:hover .services__icon .services__btn,
+      &:hover .services__icon > .fa-angle-right {
+        background-color: $primaryColor;
+      }
+
+      &:hover img {
+        transform: scale(1.2);
+      }
+
+      &__img {
+        overflow: hidden;
+      }
+
+      &__img,
+      &__heading,
+      &__text {
+        margin-bottom: 1rem;
+      }
+
+      &__heading {
+        font-size: 1.4rem;
+      }
+
+      .services__icon {
+        position: relative;
+
+        &:hover .fa-angle-right,
+        &:hover .services__btn {
+          background-color: $secondaryColor;
+        }
+
+        i {
+          position: relative;
+          @include icon(2.5rem, 0 30px 30px 0, 1.1rem, $primaryColor);
+          border: none;
+
+          @include breakpoints(768px) {
+            display: none;
+          }
+        }
+
+        .services__btn {
+          @include btn-on-hover();
+          @include positioning(absolute, 0, auto, 10px);
+          line-height: 0.8;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @include breakpoints(768px) {
+            display: none;
+          }
+        }
+      }
+
+      .services__btn-2 {
+        @include btn-on-hover();
+        display: none;
+        text-align: center;
+
+        @include breakpoints(768px) {
+          display: block;
+          width: 30%;
+        }
+
+        @include breakpoints(576px) {
+          width: 50%;
+        }
+      }
+    }
+  }
+}

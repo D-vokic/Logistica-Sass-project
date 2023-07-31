@@ -1,0 +1,120 @@
+@use "variables" as *;
+
+@mixin flex($justify: center, $align: center, $flow: row wrap, $gap: 0px) {
+  display: flex;
+  justify-content: $justify;
+  align-items: $align;
+  flex-flow: $flow;
+  gap: $gap;
+}
+
+@mixin grid($value: 2, $fr: 1, $gap: 0) {
+  display: grid;
+  grid-template-columns: repeat($value, $fr);
+  gap: $gap;
+}
+
+@mixin icon($units: 2rem,
+  $borderRadius: 50%,
+  $fontSize: 1.1rem,
+  $bg: transparent,
+  $color: $lightColor,
+  $bgHover: $lightColor,
+  $colorHover: $primaryColor,
+  $fontSize1: 0.8rem,
+  $units1: 1.7rem) {
+  height: $units;
+  width: $units;
+  line-height: $units;
+  border-radius: $borderRadius;
+  font-size: $fontSize;
+  text-align: center;
+  cursor: pointer;
+  background: $bg;
+  color: $color;
+
+  @include breakpoints(576px) {
+    font-size: $fontSize1;
+    height: $units1;
+    width: $units1;
+    line-height: $units1;
+  }
+}
+
+@mixin btn($bg: $primaryColor,
+  $color: $lightColor,
+  $paddingY: 1rem,
+  $paddingX: 1.5rem,
+  $bgColor: $lightColor,
+  $brColor: $primaryColor ) {
+  background-color: $bg;
+  color: $color;
+  padding: $paddingY $paddingX;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+
+  &:hover {
+    color: $bgColor;
+    background-color: $brColor;
+  }
+
+  @include breakpoints(576ps) {
+    font-size: 0.8rem;
+    padding: 0.7rem 0.8rem;
+  }
+}
+
+@mixin positioning($position: absolute,
+  $top: auto,
+  $right: auto,
+  $bottom: auto,
+  $left: auto) {
+  position: $position;
+  top: $top;
+  right: $right;
+  bottom: $bottom;
+  left: $left;
+  display: block;
+  content: "";
+  transition: 0.5s ease;
+}
+
+@mixin btn-on-hover($bg: $primaryColor,
+  $color: $lightColor,
+  $paddingY: 0.5rem,
+  $bgColor: $lightColor,
+  $brColor: $primaryColor) {
+  background-color: $bg;
+  color: $color;
+  padding: $paddingY;
+  font-weight: 500;
+  text-transform: capitalize;
+  display: inline-block;
+  cursor: pointer;
+  border: none;
+  width: 0;
+  height: 2.5rem;
+  z-index: -1;
+  border-radius: 0 35px 35px 0;
+  text-align: right;
+  transition: 0.5s ease;
+
+  &:hover {
+    color: $bgColor;
+    border-color: $brColor;
+  }
+
+  @include breakpoints(576ps) {
+    font-size: 0.9rem;
+    padding: 0.8rem 0.9rem;
+  }
+}
+
+@mixin breakpoints($bp) {
+  @media (max-width: $bp) {
+    @content;
+  }
+}

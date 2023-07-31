@@ -1,0 +1,108 @@
+@use "../components/" as *;
+
+.team {
+  &__wrapper {
+    @include flex(space-between, center, wrap);
+    margin-top: 3rem;
+
+    @include breakpoints(992px) {
+      @include flex(center, center, wrap, 1rem);
+    }
+
+    .team__item {
+      flex-basis: 23%;
+      box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+      padding: 1rem;
+
+      @include breakpoints(992px) {
+        flex-basis: 45%;
+      }
+
+      @include breakpoints(768px) {
+        flex-basis: 100%;
+      }
+
+      &:hover .team__icon .team__btn,
+      &:hover .team__icon .fa-share {
+        background-color: $primaryColor;
+        width: 70%;
+
+        @include breakpoints(768px) {
+          width: 50%;
+        }
+      }
+
+      &:hover .team__icon .fa-share {
+        @include icon(2.5rem, 0);
+      }
+
+      &__img {
+        overflow: hidden;
+      }
+
+      &:hover .team__img {
+        transform: scale(1.2);
+      }
+
+      .team__name {
+        margin-top: 1rem;
+        font-size: 1.25rem;
+      }
+
+      .team__position {
+        margin-bottom: 1rem;
+      }
+
+      .team__icon {
+        position: relative;
+
+        &:hover .team__btn {
+          width: 70%;
+
+          @include breakpoints(768px) {
+            width: 50%;
+          }
+        }
+
+        &:hover .team__btn,
+        &:hover > .fa-share {
+          background-color: $secondaryColor;
+        }
+
+        i {
+          position: relative;
+          @include icon(2.5rem, 0 35px 35px 0, 1.1rem, $primaryColor);
+          z-index: 1;
+        }
+
+        .team__btn {
+          @include flex(center, center);
+          @include icon(2rem, 0, 1rem, $primaryColor);
+          position: absolute;
+          top: 0;
+          left: 1%;
+          width: 0;
+          height: 100%;
+          border-radius: 0 35px 35px 0;
+          padding-right: 2rem;
+          transition: 0.5s ease;
+        }
+
+        .team__btn a {
+          position: relative;
+          @include icon(1.1rem, 0, 1.1rem, transparent);
+          flex-basis: 33%;
+          margin-right: -15px;
+
+          @include breakpoints(768px) {
+            margin-right: -25px;
+          }
+
+          @include breakpoints(576px) {
+            margin-right: -35px;
+          }
+        }
+      }
+    }
+  }
+}

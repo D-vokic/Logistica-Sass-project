@@ -1,0 +1,138 @@
+@use "../components/" as *;
+
+.nav {
+  background-color: $lightColor;
+  @include flex(space-between, stretch, nowrap);
+  border-top: 5px solid $primaryColor;
+
+  &__logo {
+    background-color: $primaryColor;
+    padding: 1rem 3rem;
+
+    @include breakpoints(576px) {
+      padding: 1.5rem;
+    }
+
+    &__heading {
+      color: $lightColor;
+      font-size: 2rem;
+
+      @include breakpoints(576px) {
+        font-size: 1.5rem;
+      }
+    }
+  }
+
+  &__list {
+    @include flex(center, stretch, nowrap, 1.5rem);
+    margin-right: 10%;
+
+    @include breakpoints(1200px) {
+      display: none;
+    }
+
+    .nav__item {
+      @include flex(center, center);
+      position: relative;
+
+      &:hover::after {
+        width: 100%;
+        left: 0;
+        right: 0;
+      }
+
+      &::after {
+        @include positioning(absolute, -5px, auto, auto, 50%);
+        width: 0;
+        height: 4px;
+        background-color: $lightColor;
+      }
+
+      .nav__link {
+        color: $bodyColor;
+        text-transform: uppercase;
+
+        &.active {
+          color: $primaryColor;
+
+          &::after {
+            @include positioning(absolute, -5px);
+            width: 100%;
+            height: 4px;
+            background-color: $lightColor;
+          }
+        }
+
+        &:hover {
+          color: $primaryColor;
+        }
+      }
+
+      &.dropdown {
+        display: flex;
+        align-items: center;
+        gap: 0.5rem;
+        position: relative;
+
+        &:hover > .nav__dropdown {
+          top: 100%;
+          opacity: 1;
+        }
+
+        .nav__dropdown {
+          @include positioning(absolute, 200%);
+          font-size: 0.9rem;
+          opacity: 0;
+          background-color: $lightColor;
+          padding: 1rem 2rem;
+          width: 10rem;
+
+          &__link {
+            color: $darkColor;
+            padding: 0.4rem 0.5rem;
+            display: block;
+
+            &:hover {
+              background-color: #d3d3d3;
+            }
+          }
+        }
+      }
+    }
+
+    .nav__contact {
+      @include flex(center, center, nowrap, 0.7rem);
+      font-weight: 600;
+      font-size: 1.4rem;
+
+      i {
+        color: $primaryColor;
+      }
+    }
+  }
+
+  &__hamburger {
+    margin-right: 10%;
+    @include flex(center, center);
+    display: none;
+
+    i {
+      color: $secondaryColor;
+      background-color: transparent;
+      border: 1px solid #eeeeee;
+      font-size: 2rem;
+      cursor: pointer;
+      width: 1.5rem;
+      height: 1.5rem;
+    }
+
+    @include breakpoints(1200px) {
+      display: block;
+      @include flex(center, center);
+    }
+
+    @include breakpoints(576px) {
+      font-size: 1.2rem;
+    }
+  }
+}

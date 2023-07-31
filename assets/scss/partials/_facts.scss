@@ -1,0 +1,164 @@
+@use "../components/" as *;
+
+.facts {
+  margin-top: 2rem;
+  @include grid(2, 1fr);
+
+  @include breakpoints(1400px) {
+    @include grid(1, 1fr, 2rem);
+  }
+
+  @include breakpoints(992px) {
+    justify-items: stretch;
+    margin-right: 10%;
+  }
+
+  @include breakpoints(576px) {
+    margin-right: 0;
+  }
+
+  &__item {
+    @include flex(stretch, start, column);
+    margin-right: 2rem;
+
+    @include breakpoints(992px) {
+      display: block;
+    }
+
+    .section-title {
+      @include breakpoints(576px) {
+        font-size: 1.2rem;
+      }
+    }
+
+    .section-title-before {
+      font-weight: 700;
+    }
+
+    .section-title-before,
+    .section-title {
+      text-align: left;
+
+      @include breakpoints(992px) {
+        text-align: center;
+      }
+    }
+
+    .facts__text {
+      margin: 3rem 0;
+
+      @include breakpoints(992px) {
+        text-align: center;
+        margin: 1rem 0;
+      }
+    }
+
+    .facts__query {
+      @include flex(start, center, row nowrap, 2rem);
+
+      @include breakpoints(992px) {
+        margin-top: 2rem;
+        flex-direction: column;
+        text-align: center;
+      }
+
+      i {
+        @include icon(
+          4rem,
+          none,
+          1.5rem,
+          $primaryColor,
+          $lightColor,
+          $primaryColor,
+          $lightColor
+        );
+        cursor: auto;
+
+        @include breakpoints(576px) {
+          font-size: 1.1rem;
+          height: 4rem;
+          width: 4rem;
+          line-height: 4rem;
+        }
+      }
+
+      .facts__info {
+        .facts__info-1 {
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          color: $darkColor;
+
+          @include breakpoints(576px) {
+            margin-bottom: 0;
+            text-align: center;
+          }
+        }
+
+        .facts__info-2 {
+          color: $primaryColor;
+          font-weight: 700;
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .facts__boxes {
+      @include flex(center, center, wrap, 2rem);
+      width: 100%;
+
+      @include breakpoints(1400px) {
+        @include flex(start, center, row, 2rem);
+      }
+
+      @include breakpoints(768px) {
+        flex-direction: column;
+        text-align: center;
+        align-items: stretch;
+      }
+
+      .facts__red-blue {
+        display: flex;
+        flex-direction: column;
+        gap: 2rem;
+
+        @include breakpoints(1400px) {
+          @include flex(start, center, row, 2rem);
+        }
+
+        @include breakpoints(768px) {
+          flex-direction: column;
+          align-items: stretch;
+          text-align: center;
+        }
+      }
+
+      #red,
+      #blue,
+      #green {
+        color: $lightColor;
+        padding: 1.5rem 5rem 1.7rem 1rem;
+
+        @include breakpoints(768px) {
+          padding: 1.5rem;
+        }
+      }
+
+      .facts__numbers {
+        padding: 0.5rem 0;
+        font-size: 2rem;
+      }
+
+      .facts__red {
+        background-color: $primaryColor;
+      }
+
+      .facts__blue {
+        background-color: $secondaryColor;
+      }
+
+      .facts__green {
+        background-color: #198754;
+      }
+    }
+  }
+}

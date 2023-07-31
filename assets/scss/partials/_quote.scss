@@ -1,0 +1,173 @@
+@use "../components/" as *;
+
+.quote {
+  @include flex(space-between, center, wrap);
+
+  @include breakpoints(992px) {
+    gap: 2rem;
+    justify-content: center;
+  }
+
+  .quote__item:first-child {
+    flex-basis: 45%;
+  }
+
+  .quote__item:last-child {
+    flex-basis: 55%;
+  }
+
+  @include breakpoints(992px) {
+    .quote__item:first-child,
+    .quote__item:last-child {
+      flex-basis: 100%;
+    }
+  }
+
+  &__item {
+    .section-title-before,
+    .section-title {
+      text-align: left;
+      max-width: 100%;
+
+      @include breakpoints(992px) {
+        text-align: center;
+      }
+    }
+
+    .quote__text {
+      margin: 2.5rem 0;
+      max-width: 500px;
+
+      @include breakpoints(992px) {
+        text-align: center;
+        max-width: 100%;
+      }
+    }
+
+    .quote__query {
+      @include flex(start, center, row nowrap, 2rem);
+
+      @include breakpoints(992px) {
+        @include flex(center, center, row nowrap, 1rem);
+        margin-bottom: 2rem;
+      }
+
+      i {
+        @include icon(
+          4rem,
+          none,
+          1.5rem,
+          $primaryColor,
+          $lightColor,
+          $primaryColor,
+          $lightColor
+        );
+        cursor: auto;
+      }
+
+      .quote__info {
+        .quote__info-1 {
+          margin-bottom: 0.5rem;
+          font-weight: 700;
+          color: $darkColor;
+
+          @include breakpoints(576px) {
+            font-size: 0.8rem;
+            margin-bottom: 0;
+          }
+        }
+
+        .quote__info-2 {
+          color: $primaryColor;
+          font-weight: 700;
+          font-size: 1.5rem;
+
+          @include breakpoints(576px) {
+            font-size: 0.8rem;
+          }
+        }
+      }
+    }
+  }
+
+  .quote__form__wrapper {
+    background-color: #f8f2f0;
+    width: 100%;
+
+    form {
+      @include flex(space-between, center, wrap, 1rem);
+      padding: 2rem;
+
+      .form__element {
+        padding: 1rem;
+        text-transform: capitalize;
+        width: 45%;
+        border: 4px solid #fff;
+
+        &::placeholder {
+          font-size: 1rem;
+          color: $bodyColor;
+        }
+
+        @include breakpoints(576px) {
+          width: 100%;
+          font-size: 0.7rem;
+        }
+      }
+
+      .form__select {
+        color: $bodyColor;
+        font-size: 1rem;
+        width: 45%;
+        padding: 1rem;
+        border: 4px solid #fff;
+
+        @include breakpoints(576px) {
+          width: 100%;
+          font-size: 0.8rem;
+        }
+      }
+
+      .form__textArea {
+        padding: 0.5rem;
+        border: 4px solid #fff;
+        text-transform: capitalize;
+        line-height: 1.5;
+        width: 100%;
+
+        @include breakpoints(576px) {
+          display: inline-block;
+        }
+
+        &::placeholder {
+          font-size: 1.1rem;
+          color: $bodyColor;
+
+          @include breakpoints(576px) {
+            font-size: 0.8rem;
+          }
+        }
+      }
+
+      button {
+        background-color: $primaryColor;
+        color: $lightColor;
+        padding: 1rem;
+        text-transform: capitalize;
+        font-weight: 600;
+        cursor: pointer;
+        width: 100%;
+
+        @include breakpoints(576px) {
+          display: inline-block;
+        }
+      }
+
+      .form__element.clicked,
+      .form__select.clicked,
+      .form__textArea.clicked {
+        border: 4px solid pink;
+      }
+    }
+  }
+}

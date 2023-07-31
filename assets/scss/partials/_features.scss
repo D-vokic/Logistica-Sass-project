@@ -1,0 +1,108 @@
+@use "../components/" as *;
+
+.features {
+  @include flex(flex-start, stretch, wrap, 1.5rem);
+
+  &__item {
+    flex: 1 0 400px;
+
+    @include breakpoints(450px) {
+      flex: 1 0 250px;
+    }
+
+    &:last-child {
+      max-height: 500px;
+
+      .features__img {
+        height: 100%;
+      }
+    }
+
+    &:first-child {
+      margin-left: 10%;
+
+      @include breakpoints(576px) {
+        margin: 0 5%;
+      }
+
+      .section-title-before,
+      .section-title {
+        text-align: left;
+        margin-bottom: 2rem;
+
+        @include breakpoints(576px) {
+          margin-bottom: 1rem;
+        }
+      }
+
+      .section-title {
+        max-width: 550px;
+
+        @include breakpoints(992px) {
+          font-size: 2rem;
+          max-width: 550px;
+        }
+
+        @include breakpoints(576px) {
+          font-size: 1.5rem;
+          max-width: 450px;
+          margin-bottom: 2rem;
+        }
+      }
+
+      .section-title-before {
+        font-weight: 700;
+      }
+
+      .features__promo {
+        @include flex(start, stretch, row nowrap, 2rem);
+
+        @include breakpoints(768px) {
+          gap: 1rem;
+        }
+
+        @include breakpoints(576px) {
+          flex-wrap: wrap;
+        }
+
+        i {
+          font-size: 3em;
+          color: $primaryColor;
+          cursor: auto;
+          font-weight: 900;
+        }
+
+        .features__info {
+          .features__info-1 {
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+            font-size: 1.25rem;
+            color: $darkColor;
+          }
+
+          .features__info-2 {
+            color: $bodyColor;
+
+            @include breakpoints(768px) {
+              font-size: 0.9rem;
+            }
+
+            @include breakpoints(576px) {
+              font-size: 0.8rem;
+            }
+          }
+        }
+      }
+
+      .features__promo:not(:last-child) {
+        margin-bottom: 2rem;
+      }
+
+      .features__promo {
+        @include breakpoints(576px) {
+          margin-bottom: 2rem;
+        }
+      }
+    }
+  }
+}

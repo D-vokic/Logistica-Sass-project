@@ -1,0 +1,147 @@
+@use "../components/" as *;
+
+.pricing {
+  &__wrapper {
+    margin-top: 3rem;
+    @include flex(space-between, center, wrap);
+
+    @include breakpoints(992px) {
+      gap: 2rem;
+    }
+
+    @include breakpoints(768px) {
+      @include flex(center);
+    }
+
+    .pricing__item {
+      flex-basis: 32%;
+      box-shadow: 0 0 45px rgba(0, 0, 0, 0.07);
+      padding: 2rem;
+
+      @include breakpoints(992px) {
+        flex-basis: 45%;
+      }
+
+      @include breakpoints(768px) {
+        flex-basis: 100%;
+      }
+
+      &:hover .pricing__icon span.pricing__btn {
+        width: 10rem;
+      }
+
+      &:hover .pricing__icon > i {
+        border-radius: 0;
+      }
+
+      &:hover .pricing__icon .pricing__btn,
+      &:hover .pricing__icon > .fa-angle-right {
+        background-color: $primaryColor;
+      }
+    }
+
+    .pricing__header {
+      .pricing__heading {
+        font-size: 1.25rem;
+        color: $primaryColor;
+
+        @include breakpoints(768px) {
+          font-size: 1rem;
+        }
+      }
+
+      @include breakpoints(768px) {
+        text-align: center;
+      }
+    }
+
+    .pricing__price {
+      font-size: 1.1rem;
+      color: $darkColor;
+      margin: 1rem 0;
+      border-bottom: 2px solid #ddd;
+      padding-bottom: 1rem;
+
+      @include breakpoints(768px) {
+        text-align: center;
+      }
+
+      .dollar__top {
+        vertical-align: top;
+        font-size: 1.3rem;
+      }
+
+      span {
+        font-size: 3rem;
+
+        @include breakpoints(768px) {
+          font-size: 2rem;
+        }
+
+        @include breakpoints(576px) {
+          font-size: 1.5rem;
+        }
+      }
+    }
+
+    .pricing__list {
+      &__item {
+        @include flex(start, center);
+        margin-bottom: 1rem;
+      }
+
+      .pricing__text {
+        @include breakpoints(576px) {
+          font-size: 0.8rem;
+        }
+      }
+
+      i {
+        font-size: 1.3rem;
+        font-weight: 600;
+        margin-right: 0.7rem;
+        color: #198754;
+
+        @include breakpoints(576px) {
+          font-size: 0.8rem;
+        }
+      }
+
+      .pricing__icon {
+        position: relative;
+        cursor: pointer;
+
+        &:hover .fa-angle-right,
+        &:hover .pricing__btn {
+          background-color: $secondaryColor;
+        }
+
+        i {
+          position: relative;
+          @include icon(2.5rem, 0 30px 30px 0, 1.1rem, $primaryColor);
+          border: none;
+
+          @include breakpoints(576px) {
+            width: 2rem;
+            height: 2rem;
+            line-height: 2rem;
+            border-radius: 0 30px 30px 0;
+          }
+        }
+
+        .pricing__btn {
+          @include btn-on-hover();
+          @include positioning(absolute, 0, auto, 10px);
+          line-height: 0.8;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+
+          @include breakpoints(576px) {
+            height: 2rem;
+          }
+        }
+      }
+    }
+  }
+}

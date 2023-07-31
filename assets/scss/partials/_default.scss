@@ -1,0 +1,96 @@
+@use "../variables" as *;
+@use "../mixins" as *;
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  scroll-behavior: smooth;
+  transition: 0.6s;
+  text-decoration: none;
+  list-style-type: none;
+  outline: none;
+  border: none;
+}
+
+html {
+  &::-webkit-scrollbar {
+    width: 0.5rem;
+  }
+
+  &::-webkit-scrollbar-track {
+    background: $lightColor;
+  }
+
+  &::-webkit-scrollbar-thumb {
+    background: $secondaryColor;
+  }
+}
+
+body {
+  font-weight: 400;
+  line-height: 1.5;
+  font-family: "Inter", sans-serif;
+  overflow-x: hidden;
+  color: $bodyColor;
+  font-size: 1rem;
+
+  @media (width < 576px) {
+    font-size: 80%;
+  }
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Roboto", sans-serif;
+  text-transform: capitalize;
+  line-height: 1.2;
+}
+
+img {
+  vertical-align: middle;
+  object-fit: cover;
+  width: 100%;
+}
+
+section {
+  padding: 4.5rem 0;
+}
+
+i {
+  cursor: pointer;
+}
+
+.container {
+  width: 80%;
+  margin: 0 auto;
+
+  @include breakpoints(576px) {
+    width: 90%;
+  }
+}
+
+.section-title {
+  font-weight: 700;
+  text-transform: capitalize;
+  color: $darkColor;
+  font-size: 2.5rem;
+  text-align: center;
+
+  @include breakpoints(576px) {
+    font-size: 1.6rem;
+  }
+}
+
+.section-title-before {
+  color: $secondaryColor;
+  margin-bottom: 1rem;
+  font-weight: 500;
+  text-transform: uppercase;
+  text-align: center;
+  font-size: 1rem;
+}
