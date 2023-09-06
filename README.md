@@ -1,6 +1,6 @@
 # 13-Logistica-Sass-project
 
-https://duskorsl.github.io/13-Logistica-Sass-project/
+https://D-vokic.github.io/13-Logistica-Sass-project/
 
 Hi, I am Duško.
 
