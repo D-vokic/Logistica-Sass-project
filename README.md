@@ -1,4 +1,4 @@
-# 13-Logistica-Sass-project
+# Logistica-Sass-project
 
 https://D-vokic.github.io/13-Logistica-Sass-project/
 
