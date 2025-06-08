@@ -1,6 +1,6 @@
 # Logistica-Sass-project
 
-👀 Want to see it in motion? View the working demo on GitHub right now and right [here](https://d-vokic.github.io/Logistica-Sass-project/)!
+👀 Want to see it in motion? View the working demo on GitHub right now and right [here](https://d-vokic.github.io/Logistica-Sass-project/) !
 
 Hi, I am Duško.
 
